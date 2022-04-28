@@ -1,0 +1,43 @@
+2022-04-28_11:04:13.893 [main] INFO  act.Act - loading application(s) ...
+2022-04-28_11:04:13.899 [main] INFO  act.app.App - App starting ....
+2022-04-28_11:04:14.148 [main] WARN  act.conf.AppConfig - ActFramework support compiling source code up to Java 8 only
+2022-04-28_11:04:14.191 [main] INFO  act.Act - Default port allocated for testing: 63510
+2022-04-28_11:04:14.246 [main] INFO  act.app.DbServiceManager - DB service not initialized: No DB plugin found
+2022-04-28_11:04:15.706 [main] INFO  act.xio.undertow.UndertowNetwork - Try clearing random server socket: 63510
+2022-04-28_11:04:15.732 [main] INFO  act.Act - network client hooked on port: 63510
+2022-04-28_11:04:15.736 [main] INFO  act.xio.undertow.UndertowNetwork - Try clearing random server socket: 63512
+2022-04-28_11:04:15.737 [main] INFO  act.Act - network client hooked on port: 63512
+2022-04-28_11:04:15.737 [main] INFO  act.xio.undertow.UndertowNetwork - Try clearing random server socket: 63513
+2022-04-28_11:04:15.741 [main] INFO  act.Act - network client hooked on port: 63513
+2022-04-28_11:04:15.741 [main] INFO  act.Act - CLI server started on port: 63511
+2022-04-28_11:04:15.810 [main] INFO  act.Act - app is ready in 3454ms at: http://192.168.55.107:63510
+
+
+2022-04-28_11:04:15.926 [jobs-thread-1] WARN  act.job.JobExceptionListenerManager - Job exception encountered on running job[post_di_load_init]
+java.lang.reflect.InaccessibleObjectException: Unable to make field int java.awt.Color.value accessible: module java.desktop does not "opens java.awt" to unnamed module @10f397d0
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172)
+	at org.osgl.Lang.addFieldsToList(Lang.java:8056)
+	at org.osgl.Lang.fieldsOf(Lang.java:7986)
+	at org.osgl.Lang.fieldsOf(Lang.java:7938)
+	at org.osgl.Lang.fieldOf(Lang.java:7876)
+	at org.osgl.Lang.fieldOf(Lang.java:7858)
+	at act.conf.AppConfig.captchaBgColor(AppConfig.java:461)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.osgl.Lang.invokeVirtual(Lang.java:8221)
+	at act.conf.AppConfig.preloadConfigurations(AppConfig.java:222)
+	at act.app.App$4.run(App.java:824)
+	at act.job.JobManager$ContextualJob$1.apply(JobManager.java:543)
+	at act.job.Job.doJob(Job.java:408)
+	at act.job.Job.run(Job.java:337)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
